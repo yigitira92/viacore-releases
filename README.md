@@ -10,14 +10,14 @@ Hangi uygulamanın internete proxy üzerinden, doğrudan ya da hiç çıkmayaca�
 
 [![Son sürüm](https://img.shields.io/github/v/release/yigitira92/viacore-releases?style=flat-square&label=s%C3%BCr%C3%BCm&color=7C3AED)](https://github.com/yigitira92/viacore-releases/releases/latest)
 [![İndirme](https://img.shields.io/github/downloads/yigitira92/viacore-releases/total?style=flat-square&label=indirme&color=3B82F6)](https://github.com/yigitira92/viacore-releases/releases)
-[![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D4?style=flat-square&logo=windows&logoColor=white)](#sistem-gereksinimleri)
+[![Windows](https://img.shields.io/badge/Windows-7%20%E2%80%93%2011-0078D4?style=flat-square&logo=windows&logoColor=white)](#sistem-gereksinimleri)
 [![Mimari](https://img.shields.io/badge/mimari-x64-475569?style=flat-square)](#sistem-gereksinimleri)
 
 <br />
 
-<a href="https://github.com/yigitira92/viacore-releases/releases/latest"><img src="https://img.shields.io/badge/%C4%B0ND%C4%B0R-Windows%20x64-7C3AED?style=for-the-badge&logo=windows&logoColor=white" height="40" alt="İndir (Windows x64)" /></a>
+<a href="https://github.com/yigitira92/viacore-releases/releases/latest/download/ViaCore-Setup.msi"><img src="https://img.shields.io/badge/%C4%B0ND%C4%B0R-Windows%20x64-7C3AED?style=for-the-badge&logo=windows&logoColor=white" height="40" alt="İndir (Windows x64)" /></a>
 
-<sub>Kurulum dosyası (.msi) · Türkçe ve İngilizce arayüz · Otomatik güncelleme</sub>
+<sub>Her zaman son sürüm (.msi) · Türkçe ve İngilizce arayüz · Otomatik güncelleme · <a href="https://github.com/yigitira92/viacore-releases/releases">Tüm sürümler</a></sub>
 
 </div>
 
@@ -94,7 +94,7 @@ Yeni sürümler arka planda iner, imzası doğrulanır ve kendiliğinden kurulur
 
 ## Kurulum
 
-1. **[Son sürüm](https://github.com/yigitira92/viacore-releases/releases/latest)** sayfasından `ViaCore-<sürüm>-x64.msi` dosyasını indirin.
+1. **[ViaCore-Setup.msi](https://github.com/yigitira92/viacore-releases/releases/latest/download/ViaCore-Setup.msi)** dosyasını indirin. Bu bağlantı her zaman son sürümü indirir.
 2. Dosyayı çalıştırın ve sihirbazı izleyin. Kurulum yönetici izni ister.
 3. Kurulum bitince ViaCore açılır. ViaCore hizmeti Windows ile birlikte kendiliğinden başlar; pencereyi kapatsanız da yönlendirme sürer.
 
@@ -112,11 +112,11 @@ Tüm sürümler ve değişiklik notları: **[Sürümler](https://github.com/yigi
 
 | | |
 |---|---|
-| **Windows** | Windows 10 veya 11, 64 bit |
-| **.NET** | .NET Framework 4.6.1 veya üzeri (Windows 10 ve 11'de yerleşik olarak bulunur) |
+| **Windows** | Windows 7 SP1, 8, 8.1, 10 veya 11, 64 bit |
+| **.NET** | .NET Framework 4.6.1 veya üzeri (Windows 10 ve 11'de yerleşik; Windows 7 ve 8'de Microsoft'tan kurulur, kurulum eksikse söyler) |
 | **Yetki** | Kurulum için yönetici hakkı |
 
-> Windows 7 SP1, 8, 8.1 ve Windows Server 2008 R2 SP1 ve üzeri de desteklenmek üzere tasarlandı; bu sürümlerdeki testler sürüyor.
+> Windows 7 SP1'de Microsoft'un SHA-2 imza desteği güncellemesi (KB4474419) kurulu olmalıdır; Windows Update bunu 2019'dan beri sunar. Kurulum, Windows sürümünüze uygun trafik yakalama sürücüsünü kendisi seçer. Windows 8 ve 8.1 desteklenmek üzere hazırlandı, henüz test edilmedi.
 
 ## Güvenlik
 
@@ -137,11 +137,11 @@ ViaCore, [WinDivert 2.2](https://github.com/basil00/WinDivert) bileşenini LGPLv
 
 **ViaCore Proxy Management** sends each Windows application through a proxy, directly, or blocks it, by rules on the application, the destination and the port.
 
-- **Download:** the [latest release](https://github.com/yigitira92/viacore-releases/releases/latest) (`ViaCore-<version>-x64.msi`). Setup needs administrator rights; the wizard opens in English or Turkish, following Windows.
+- **Download:** [ViaCore-Setup.msi](https://github.com/yigitira92/viacore-releases/releases/latest/download/ViaCore-Setup.msi), always the newest version ([all releases](https://github.com/yigitira92/viacore-releases/releases)). Setup needs administrator rights; the wizard opens in English or Turkish, following Windows.
 - **Proxies:** SOCKS5, SOCKS4/4A, HTTPS (CONNECT) and HTTP, with user name and password, NTLM, Kerberos, Negotiate or your Windows login; chains with failover and load balancing; name resolution through the proxy.
 - **Live view:** which application connects where, by which rule and through which proxy, with latency and traffic.
 - **Updates:** there are no separate patches. Every release is one installer that also updates existing installations. Installed copies find a new release at their next start, when the window opens, or within 12 hours, verify its signature and install it themselves.
-- **Requirements:** Windows 10 or 11, 64-bit, .NET Framework 4.6.1 or later. Windows 7 SP1, 8, 8.1 and Windows Server 2008 R2 SP1 and later are designed for and still being tested.
+- **Requirements:** Windows 7 SP1, 8, 8.1, 10 or 11, 64-bit, .NET Framework 4.6.1 or later. Windows 7 SP1 needs Microsoft's SHA-2 code signing update (KB4474419). Setup picks the interception driver build your Windows accepts. Windows 8 and 8.1 are prepared for but not yet tested.
 - **Third-party:** WinDivert 2.2 under the LGPLv3, redistributed unmodified. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 </details>
